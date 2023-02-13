@@ -1,0 +1,30 @@
+#viewport-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#main-container {
+    height: calc(100% - 80px);
+    /* test */
+    display: flex;
+    flex-flow: row, nowrap;
+}
+
+header {
+    width: 175px;
+    /* test */
+    background-color: black;
+}
+
+main {
+    width: calc(100% - 175px);
+    /* test */
+    background-color: #141922;
+}
+
+footer {
+    height: 80px;
+    /* test */
+    background-color: #282828;
+}
