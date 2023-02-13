@@ -17,11 +17,118 @@ header {
     background-color: black;
 }
 
+/* MAIN START HERE */
+
 main {
+    background-color: #141922;
     width: calc(100% - 175px);
     /* test */
-    background-color: #141922;
+    position: relative;
+    overflow: auto;
 }
+
+/* UPGRADE */
+
+#premium-upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 80px;
+    /* test */
+    padding-right: 2em;
+    width: calc(100% - 175px);
+    position: fixed;
+    top: 0; 
+    right: 0;
+}
+
+#premium-upgrade button {
+    padding: 1em 2em;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.0);
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* PLAYED SECTION */
+
+#main-inner {
+    padding: 100px 40px;
+    /* test */
+}
+
+#sections {
+    display: flex;
+    justify-content: center;
+}
+
+#sections #section-links {
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    gap: 1em;
+}
+
+#section-links li a {
+    text-decoration: none;
+    opacity: .7;
+    color: white;
+    cursor: pointer;
+}
+
+h2 {
+    padding: 2em 0 1em;
+}
+
+/* CONTAINER FEATURES FOR COVER SECTIONS */
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    text-align: center;
+}
+
+.container .cover {
+    width: calc(100% / 6 - (1em / 6 * 5));
+}
+
+.container .cover .cover-img {
+    margin-bottom: 1.2em;
+}
+
+.container .cover .cover-img img {
+    width: 100%;
+}
+
+.container .cover .cover-name {
+    margin-bottom: .4em;
+}
+
+.container .cover .cover-artist, #main-inner p {
+    opacity: .7;
+    margin-bottom: 1em;
+}
+
+/* FAMOUS ARTIST SECTION */
+
+#famous-artists .cover .cover-img img {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     height: 80px;
