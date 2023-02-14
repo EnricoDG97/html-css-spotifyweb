@@ -119,6 +119,42 @@ h2 {
     border-radius: 50%;
 }
 
+/* FOOTER START HERE */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;  
+    background-color: #282828;
+}
+
+.player-side {
+    max-width: 175px;
+}
+
+.player-main {
+    max-width: 500px;
+    min-width: 175px;
+    width: 100%;
+}
+
+#player-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#player-center {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;    
+}
+
+#player-right {
+    display: flex;
+    align-items: center;
+}
 
 
 
