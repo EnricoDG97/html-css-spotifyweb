@@ -223,14 +223,14 @@ footer {
     flex-grow: 1;
 }
 
-#player-bar-total {
+#player-bar-total, #volume-range-bar {
     background-color: #5a5a5a;
     /* test */
     width: 100%;
     height: 3px;
 }
 
-#player-bar-played {
+#player-bar-played, #volume-played {
     width: 25%;
     height: 100%;
     background-color: white;
@@ -241,7 +241,20 @@ footer {
 
 #player-right {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
+
+#player-right .fa-solid {
+    cursor: pointer;
+    padding: .2em;
+}
+
+#volume-bar {
+    width: 100px;
+}
+
 
 
 
