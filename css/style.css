@@ -142,6 +142,8 @@ footer {
     padding: 15px 10px;
 }
 
+/* LEFT SECTION */
+
 #player-left {
     display: flex;
     justify-content: space-between;
@@ -158,10 +160,12 @@ footer {
 
 #p-left-title {
     color: white;
+    flex-grow: 1;
 }
 
 #p-left-title p {
     opacity: .7;
+    white-space: nowrap;
 }
 
 #p-left-icons {
@@ -176,11 +180,64 @@ footer {
     cursor: pointer;
 }
 
+/* MIDDLE SECTION */
+
 #player-center {
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    gap: 10px;
 }
+
+#player-buttons {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    gap: 20px;
+
+}
+
+#player-buttons .fa-solid {
+    margin-top: .5em;
+    cursor: pointer;
+}
+
+#player-buttons .fa-regular:nth-child(3) {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#player-timeline {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#player-timeline * span {
+    opacity: .7;
+}
+
+#player-bar {
+    flex-grow: 1;
+}
+
+#player-bar-total {
+    background-color: #5a5a5a;
+    /* test */
+    width: 100%;
+    height: 3px;
+}
+
+#player-bar-played {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    opacity: .7;
+}
+
+/* RIGHT SECTION */
 
 #player-right {
     display: flex;
