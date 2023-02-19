@@ -23,7 +23,9 @@ header {
 }
 
 #logo {
-    padding-top: 2rem;
+    padding-top: 1rem;
+    /* test */
+    padding-left: 2rem;
 }
 
 #logo img {
@@ -37,13 +39,13 @@ nav {
 }
 
 h3 {
-    margin: 1em 0;
+    margin: .5em 0;
     color: white;
     cursor: pointer;
 }
 
 #header-top {
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     padding-right: 2rem;
 }
 
@@ -51,12 +53,17 @@ h3 {
     list-style-type: none;
 }
 
+#main-links {
+    padding-left: 2rem;
+}
+
 #header-top nav ul li {
     display: flex;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 10px;
     margin-top: 1em;
     cursor: pointer;
+    /* test */
 }
 
 #header-top nav ul li a {
@@ -64,15 +71,20 @@ h3 {
     cursor: pointer;
     text-decoration: none;
     white-space: nowrap;
-    margin-top: .5em;
 }
 
 #header-top nav ul li img {
     max-width: 25px;
 }
 
+#playlist-container {
+    /* test */
+    padding-left: 2rem;
+}
+
 #playlist-container ul {
     list-style-type: none;
+    
 }
 
 #create-playlist {
@@ -168,7 +180,7 @@ main {
 /* PLAYED SECTION */
 
 #main-inner {
-    padding: 100px 40px;
+    padding: 80px 40px;
     /* test */
 }
 
@@ -181,7 +193,15 @@ main {
     list-style-type: none;
     text-transform: uppercase;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
+}
+
+#section-links li {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
 }
 
 #section-links li a {
@@ -202,18 +222,22 @@ h2 {
     flex-flow: row wrap;
     gap: 1em;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .container .cover {
     width: calc(100% / 6 - (1em / 6 * 5));
+    position: relative;
 }
 
 .container .cover .cover-img {
     margin-bottom: 1.2em;
+    position: relative;
 }
 
 .container .cover .cover-img img {
     width: 100%;
+    min-width: 150px;
 }
 
 .container .cover .cover-name {
@@ -374,5 +398,78 @@ footer {
     /* test */
 }
 
-/* HOVER EFFETCT */
+/* HOVER EFFECTS */
+
+/* DARK EFFECT OVERLAY ON COVER */
+
+#recently-played .cover:hover .cover-img::before, #correlated-search .cover:hover .cover-img::before {
+    content: '';
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background-color: black;
+}
+
+#famous-artists .cover:hover .cover-img::before {
+    content: '';
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* PLAY BUTTONS ON COVERS */
+
+.cover:hover .cover-img::after {
+    content: '\f144';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2em;
+    font-family: "Font Awesome 6 Free";
+}
+
+/* ITEM TEXT HOVER */
+
+#header-top nav ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#main-links ul li:hover a::before {
+    content: '';
+    border-left: 3px chartreuse solid;
+    position: relative;
+    right: 4em;
+}
+
+#create-playlist p:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#playlist-container #create-playlist .fa-solid:hover {
+    color: white;
+}
+
+#section-links li:hover a::before {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: chartreuse;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - (50% / 2));
+}
+
+.cover:hover {
+    text-decoration: underline;
+}
+
 
