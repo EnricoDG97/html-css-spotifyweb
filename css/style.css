@@ -14,12 +14,14 @@
 
 header {
     width: 275px;
+    max-height: fit-content;
     /* test */
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
+    overflow-y: auto;
 }
 
 #logo {
@@ -165,6 +167,7 @@ main {
     position: fixed;
     top: 0; 
     right: 0;
+    z-index: 3;
 }
 
 #premium-upgrade button {
@@ -175,6 +178,7 @@ main {
     color: white;
     border: 2px solid white;
     cursor: pointer;
+    z-index: 3;
 }
 
 /* PLAYED SECTION */
@@ -237,7 +241,7 @@ h2 {
 
 .container .cover .cover-img img {
     width: 100%;
-    min-width: 150px;
+    min-width: 100px;
 }
 
 .container .cover .cover-name {
@@ -262,15 +266,17 @@ footer {
     justify-content: space-between;
     height: 80px;  
     background-color: #282828;
+    z-index: 3;
 }
 
 .player-side {
     max-width: 275px;
+    min-width: 220px;
 }
 
 .player-main {
     max-width: 500px;
-    min-width: 275px;
+    min-width: 140px;
     width: 100%;
 }
 
@@ -330,7 +336,6 @@ footer {
     justify-content: center;
     height: 50%;
     gap: 20px;
-
 }
 
 #player-buttons .fa-solid {
@@ -472,4 +477,55 @@ footer {
     text-decoration: underline;
 }
 
+/* MEDIA QUERIES */
 
+@media screen and (max-width: 992px) {
+    .container .cover {
+        width: calc(100% / 4 - (1em / 4 * 3)); 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container .cover {
+        width: calc(100% / 2 - (1em / 2 * 1)); 
+    }
+    #p-left-icons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .desktop-view {
+        display: none;
+    }
+    .mobile-view {
+        display: inline-block;
+    }
+    header {
+        width: 75px;
+    }
+    main {
+        width: calc(100% - 75px);
+    }
+    #premium-upgrade {
+        width: calc(100% - 75px);
+    }
+    #header-bottom {
+        gap: .5em;
+    }
+    #logo {
+        padding-left: 1rem;
+    }
+    #header-top {
+        padding-right: 1rem;
+    }
+    #main-links {
+        padding-left: 0;
+    }
+    nav {
+        padding-left: 1rem;
+    }
+    #header-top nav ul li {
+        justify-content: center;
+    }
+}
